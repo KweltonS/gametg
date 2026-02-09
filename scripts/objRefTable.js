@@ -75,6 +75,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Eponesh_GameScore.Exps.LeaderboardCurPlayerIndex,
 		C3.Plugins.Eponesh_GameScore.Exps.LeaderboardCurPlayerName,
 		C3.Plugins.Eponesh_GameScore.Exps.LeaderboardCurPlayerPosition,
+		C3.Plugins.Eponesh_GameScore.Exps.LeaderboardCurPlayerField,
 		C3.Plugins.Sprite.Acts.SetSize,
 		C3.Plugins.Eponesh_GameScore.Acts.LeaderboardFetchScoped,
 		C3.Plugins.Sprite.Cnds.PickByUID
