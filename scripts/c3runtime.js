@@ -1427,6 +1427,7 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
 		},
+		() => 160,
 		() => 1,
 		() => "Game",
 		p => {
@@ -1448,22 +1449,14 @@ self.C3_ExpressionFuncs = [
 			const f1 = p._GetNode(1).GetBoundMethod();
 			return () => ((f0("Game") + (-100)) - f1((-1), 100));
 		},
-		() => 160,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			const f1 = p._GetNode(1).GetBoundMethod();
-			return () => and(and(f0(), " / "), f1("maxscore"));
+			return () => f0();
 		},
 		() => 80,
 		() => 0.15,
 		() => -10,
 		() => 0,
-		() => -8,
-		() => 8,
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0();
-		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("maxscore");
@@ -1472,6 +1465,8 @@ self.C3_ExpressionFuncs = [
 		() => "maxscore",
 		() => "ScoreRecord",
 		() => "home",
+		() => 39,
+		() => 40,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => and("Рекорд: ", f0("maxscore"));
@@ -1526,7 +1521,8 @@ self.C3_ExpressionFuncs = [
 		() => 130,
 		() => 131,
 		() => 50,
-		() => 10
+		() => 10,
+		() => 41
 ];
 
 

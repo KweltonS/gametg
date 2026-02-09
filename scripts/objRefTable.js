@@ -21,6 +21,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.CompareY,
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.Sprite.Exps.Y,
+		C3.Plugins.System.Acts.Scroll,
 		C3.Plugins.Eponesh_GameScore.Acts.PlayerAddScore,
 		C3.Plugins.System.Cnds.TriggerOnce,
 		C3.Plugins.System.Acts.CreateObject,
@@ -29,16 +30,13 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.For,
 		C3.Plugins.System.Cnds.Compare,
 		C3.Plugins.System.Cnds.EveryTick,
-		C3.Plugins.System.Acts.Scroll,
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Eponesh_GameScore.Exps.PlayerScore,
-		C3.Plugins.Eponesh_GameScore.Exps.PlayerGet,
 		C3.Behaviors.Platform.Cnds.IsOnFloor,
 		C3.Behaviors.Platform.Acts.SimulateControl,
 		C3.Behaviors.Tween.Acts.TweenOneProperty,
 		C3.Plugins.Audio.Acts.Play,
 		C3.Plugins.Keyboard.Cnds.IsKeyDown,
-		C3.Plugins.Touch.Cnds.CompareOrientation,
 		C3.Plugins.Sprite.Cnds.IsOnScreen,
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.Sprite.Cnds.IsOverlapping,
@@ -48,6 +46,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.Spawn,
 		C3.Plugins.Sprite.Cnds.OnAnyAnimFinished,
 		C3.Plugins.Sprite.Cnds.OnDestroyed,
+		C3.Plugins.Eponesh_GameScore.Exps.PlayerGet,
 		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.Eponesh_GameScore.Acts.PlayerSet,
 		C3.Plugins.Eponesh_GameScore.Acts.LeaderboardSetRecord,
@@ -59,8 +58,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Audio.Acts.SetMuted,
+		C3.Plugins.Touch.Cnds.OnHoldGestureObject,
+		C3.Plugins.TiledBg.Cnds.PickByUID,
 		C3.Plugins.Sprite.Acts.SetAnim,
-		C3.Plugins.System.Cnds.Every,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.Mouse.Cnds.OnObjectClicked,
 		C3.Plugins.Text.Cnds.PickByUID,
@@ -77,7 +77,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Eponesh_GameScore.Exps.LeaderboardCurPlayerName,
 		C3.Plugins.Eponesh_GameScore.Exps.LeaderboardCurPlayerPosition,
 		C3.Plugins.Sprite.Acts.SetSize,
-		C3.Plugins.Eponesh_GameScore.Acts.LeaderboardFetchScoped
+		C3.Plugins.Eponesh_GameScore.Acts.LeaderboardFetchScoped,
+		C3.Plugins.Sprite.Cnds.PickByUID
 	];
 };
 self.C3_JsPropNameTable = [
@@ -94,7 +95,6 @@ self.C3_JsPropNameTable = [
 	{Якорь: 0},
 	{ТайловыйФон: 0},
 	{WhiteSkull2ndOutline256px: 0},
-	{CloseButton1st64px: 0},
 	{CheckmarkButton1st64px: 0},
 	{Bomb: 0},
 	{BombEffect: 0},
@@ -117,6 +117,9 @@ self.C3_JsPropNameTable = [
 	{Fon1: 0},
 	{Fon2: 0},
 	{Аудио: 0},
+	{Upravlenie: 0},
+	{CloseButton: 0},
+	{RecordButton: 0},
 	{MinScroll: 0},
 	{NextPlatform: 0},
 	{MaxScore: 0}
@@ -132,7 +135,6 @@ self.InstanceType = {
 	Platform2: class extends self.ISpriteInstance {},
 	ТайловыйФон: class extends self.ITiledBackgroundInstance {},
 	WhiteSkull2ndOutline256px: class extends self.ISpriteInstance {},
-	CloseButton1st64px: class extends self.ISpriteInstance {},
 	CheckmarkButton1st64px: class extends self.ISpriteInstance {},
 	Bomb: class extends self.ISpriteInstance {},
 	BombEffect: class extends self.ISpriteInstance {},
@@ -152,5 +154,8 @@ self.InstanceType = {
 	RecordLid_Icon: class extends self.ISpriteInstance {},
 	Fon1: class extends self.ITiledBackgroundInstance {},
 	Fon2: class extends self.ITiledBackgroundInstance {},
-	Аудио: class extends self.IInstance {}
+	Аудио: class extends self.IInstance {},
+	Upravlenie: class extends self.ITiledBackgroundInstance {},
+	CloseButton: class extends self.ISpriteInstance {},
+	RecordButton: class extends self.ISpriteInstance {}
 }
